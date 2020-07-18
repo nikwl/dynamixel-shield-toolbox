@@ -1,3 +1,6 @@
+# dynamixel-shield-toolbox
+![alt text](Images/Dynamixel_Header.jpg "Dynamixel Header Photo")
+
 Though the Dynamixel Shield seems to offer an attractive way to control Dynamixel servos on the familiar Arduino platform, in its current early stages of development I feel that the hardware is suffering for lack of software support. Moreover, confusing documentation and a couple of hidden quirks make the shield frustratingly difficult for beginners to familiarize themselves with. This repo goes over the basics of setting up the shield from the perspective of someone who's already struggled through the process, and will (hopefully) get you up and running with the shield in a few easy steps.
 
 Note that the Dynamixel Shield is relatively new and as such it is evolving constantly. Please see the [ROBOTIS eManual](https://emanual.robotis.com/docs/en/parts/interface/dynamixel_shield/) for up-to-date information.
@@ -27,7 +30,10 @@ The serial communicator is necessary in order to send commands to, or read outpu
 
 Install the shield on the arduino, and ensure that the shield is facing the correct direction (the power connector on the shield should be facing the same way as the USB and barrel connector on the Arduino). Wire the power supply to the shield and double check the polarity (this is where the barrel connector comes in handy). Then make sure to [remove the Vin jumper](https://emanual.robotis.com/docs/en/parts/interface/dynamixel_shield/#connecting-power) so that the shield draws power from the external power supply and not from the Arduino. Finally, connect the LN-101 serial communicator. 
 
+![alt text](Images/Dynamixel_Shield.png "Dynamixel Shield with Labels")
+
 At this stage, even if you purchased multiple motors resist the urge to plug them all in and instead plug only <b>ONE</b> of them in. Shipped from ROBOTIS, all motors will have the same default ID and if you plug more than one in at a time and try to send commands then nothing will happen. 
+
 
 ### 2.2 Software
 
