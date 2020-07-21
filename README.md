@@ -120,7 +120,3 @@ If you'd like to command or query your motors from a PC then check out my [pydui
 * control motors using velocity commands,
 * control motors using position commands,
 * read the position of any connected motor. 
-
-<br>
-
-Glad you made it this far! If you found this repo helpful please consider starring it, as it helps it reach a larger audience. Thanks for reading!
