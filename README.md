@@ -16,13 +16,13 @@ Make sure that the shield is right for your project.
 I'm using the following hardware, which I've found works pretty well.
 * [Dynamixel Shield](http://www.robotis.us/dynamixel-shield/) (obviously).
 * [Arduino UNO](https://store.arduino.cc/usa/arduino-uno-rev3) (or a copycat board).
-* [LN-101 Serial Communicator](http://www.robotis.us/usb-downloader-ln-101_int/).
+* [LN-101 Serial Communicator](http://www.robotis.us/usb-downloader-ln-101_int/). This is only required for Uno, Nano, Mini, Mega.
 * 2x [Dynamixel XL-320](http://www.robotis.us/dynamixel-xl-320/).
 * 2x [Dynamixel XL-430](http://www.robotis.us/dynamixel-xl430-w250-t/).
 * [7.5V 3A variable power supply](https://www.amazon.com/gp/product/B01MT5WVCG/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1) (optionally with female barrel connector).
 * A short length of copper wire (you'll either need this, or you'll need the resolve to snip and strip your power supply).
 
-The serial communicator is necessary in order to send commands to, or read output from, the board. I tried a few different tactics to get around having to buy it but in the end it's by far the [most hassle free option]((http://en.robotis.com/service/forum_view.php?bbs_no=2407675&page=1&save_sca=&sca=&save_stx=shield&stx=shield&sfl=wr_subject||wr_content)), and it's what I would recommend if you want to use this shield. Note also that the two types of Dynamixels (XL-320 and XL-430) I'm using have pretty similar recommended voltage ranges so I'm able to power all of the motors using a single 7.5V power supply. See your motor's spec sheet for its recommended operating voltage range.
+The serial communicator is necessary in order to send commands to, or read output from, the board that shares the serial port with USB such as Uno, Nano, Mini, and Mega(see [Arduino Serial](https://www.arduino.cc/reference/en/language/functions/communication/serial/)). I tried a few different tactics to get around having to buy it but in the end it's by far the [most hassle free option]((http://en.robotis.com/service/forum_view.php?bbs_no=2407675&page=1&save_sca=&sca=&save_stx=shield&stx=shield&sfl=wr_subject||wr_content)), and it's what I would recommend if you want to use this shield. Note also that the two types of Dynamixels (XL-320 and XL-430) I'm using have pretty similar recommended voltage ranges so I'm able to power all of the motors using a single 7.5V power supply. See your motor's spec sheet for its recommended operating voltage range.
 
 ## 2. Setup
 
