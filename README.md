@@ -11,12 +11,12 @@ Make sure that the shield is right for your project.
 
 * Make sure the motor(s) you want to use is on the list of [supported motors](https://emanual.robotis.com/docs/en/parts/interface/dynamixel_shield/#supported-dynamixel).
 	* Note that the shield only has one power connector so you may not be able to use two or more different motors if they have different power requirements. 
-* Make sure you have the right Arduino, or are willing to buy some additional hardware. Some Arduinos (UNO and MEGA) require additional serial communicators in order to [communicate over serial](https://emanual.robotis.com/docs/en/parts/interface/dynamixel_shield/#how-to-use-serial-monitor-with-dynamixel-shield).
+* Make sure you have the right Arduino, or are willing to buy some additional hardware. Some Arduinos (Uno, Nano, Mini, and Mega) require additional serial communicators in order to [communicate over serial](https://emanual.robotis.com/docs/en/parts/interface/dynamixel_shield/#how-to-use-serial-monitor-with-dynamixel-shield).
 
 I'm using the following hardware, which I've found works pretty well.
 * [Dynamixel Shield](http://www.robotis.us/dynamixel-shield/) (obviously).
 * [Arduino UNO](https://store.arduino.cc/usa/arduino-uno-rev3) (or a copycat board).
-* [LN-101 Serial Communicator](http://www.robotis.us/usb-downloader-ln-101_int/). This is only required for Uno, Nano, Mini, Mega.
+* [LN-101 Serial Communicator](http://www.robotis.us/usb-downloader-ln-101_int/) (this is only required for Uno, Nano, Mini, Mega).
 * 2x [Dynamixel XL-320](http://www.robotis.us/dynamixel-xl-320/).
 * 2x [Dynamixel XL-430](http://www.robotis.us/dynamixel-xl430-w250-t/).
 * [7.5V 3A variable power supply](https://www.amazon.com/gp/product/B01MT5WVCG/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1) (optionally with female barrel connector).
@@ -69,8 +69,8 @@ Note that every time you want to change and upload your project to the shield, y
 If the led on the connected motor flashes once then congrats, your shield is up and running!
 
 
-### 2.3 Some Notes on Serial Communication
-If you'd like to use the Arduino serial monitor (Tools -> Serial Monitor) to see print statements from your project, you'll need to:
+### 2.3 Some Notes on the LN-101 Serial Communicator
+If you're using the LN-101 serial communicator and you'd like to use the Arduino serial monitor (Tools -> Serial Monitor) to see print statements from your project, you'll need to:
 
 1) have the serial communicator plugged in, and 
 2) have the active port set to the serial communicator's port, usually `/dev/ttyUSB0`.
@@ -103,8 +103,8 @@ Upload and run the project. The target motor should flash twice if the change wa
 If you're communicating with several motors in a single project then you'll want to have all of the motors communicating with a single baudrate (I chose 1000000, which is also the default for the XL-320 motors). To change the baudrate, plug in <b>ONLY</b> the motor that you want to update. Then load up the "update_baudrate" project from `Arduino/update_baudrate` (included with this repo) and alter the following variables accordingly.
 
 1) Update the value of `const uint8_t DXL_ID` so that it matches the ID of the motor you want to change. Motors have a default id of 1, so if you don't know what the id is then probably just leave it as 1.
-1) Update the value of `cost uint32_t OLD_BAUDRATE` to the current baudrate of the motor. See your motor's spec sheet for its default baudrate.
-2) Update the value of `const uint32_t NEW_BAUDRATE` to the desired new baudrate of the motor.
+2) Update the value of `cost uint32_t OLD_BAUDRATE` to the current baudrate of the motor. See your motor's spec sheet for its default baudrate.
+3) Update the value of `const uint32_t NEW_BAUDRATE` to the desired new baudrate of the motor.
 
 Upload and run the project. The target motor should flash twice if the change was successful.
 
